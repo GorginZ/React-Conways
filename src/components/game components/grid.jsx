@@ -5,23 +5,29 @@ import Tile from "./tile";
 class Grid extends PureComponent {
   constructor(props) {
     super(props);
-    const state = { data: [] };
+    this.cells = [];
+    
+
+    // const state = { data: [] };
+
   }
 
 
-  tileConstructor = () => {
-    const tiles = [];
-    for (let i = 0; i < 80; i++) {
-      for (let a = 0; a < 80; a++) {
-        tiles.push(<Tile event={this.props.tileEvent} />);
-      }
-    }
-    return tiles
+  TileConstructor = () => {
+    let cells = [];
+
+    // for (let i = 0; i < 80; i++) {
+    //   for (let j = 0; j < 80; j++) {
+    //     tiles.push(<Tile event={this.props.tileEvent} />);
+    //   }
+    // }
+    cells = Array(20).fill(<Tile event={this.props.tileEvent}/>).map(x => Array(20).fill(<Tile event={this.props.tileEvent} />));
+    return cells
   };
 
   render() {
     return <div id="grid">
-      {this.tileConstructor()}
+      {this.TileConstructor()}
     </div>;
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Tile = (props) => {
   const [colour, setColour] = useState(props.colour);
-  const { pairId } = props;
+  // const { pairId } = props;
   return (
     <div
       style={{
