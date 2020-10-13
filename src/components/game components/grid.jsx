@@ -39,7 +39,7 @@ class Grid extends PureComponent {
   };
 
   render() {
-    this.GridBuilder(10, 10);
+    this.GridBuilder(50, 50);
     console.log(this.cells);
     return <div id="grid">{this.GridSeer()}</div>;
   }

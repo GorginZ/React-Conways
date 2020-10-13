@@ -5,8 +5,8 @@ class NavBar extends React.Component {
   render() {
     return (
       <nav>
-          <Link to="/play">PLAY</Link>
-        <Link to="/scoreboard">Score Board</Link>
+          <Link to="/life">Life</Link>
+        <Link to="/patterns">Life Patterns</Link>
        
 
       </nav>

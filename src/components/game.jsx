@@ -9,14 +9,6 @@ class Game extends Component {
     this.alive = [];
     this.state = {};
   }
-  //get rid of weird flex grid make rows cols set in stone
-
-  // onInputChange = (event) => {
-  //   console.log("on input change");
-  //   this.setState({
-  //     [event.target.id]: event.target.value,
-  //   });
-  // };
 
   updateVisibility = (cell) => {
     if (cell.style["background-color"] === "blue") {
@@ -44,12 +36,10 @@ class Game extends Component {
     return (
       <>
         {" "}
-        <Grid tileEvent={this.handleClick} />
         <div className="scoreBox">
-          {" "}
-          <button>Populate Grid</button>
-          <h2>iterations:{this.state.score}</h2>
+          {" click on the cells to make alive then set start the game "}
         </div>{" "}
+        <Grid tileEvent={this.handleClick} />
       </>
     );
   }
