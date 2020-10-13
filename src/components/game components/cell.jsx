@@ -14,9 +14,10 @@ const Cell = (props) => {
         backgroundColor: "grey",
       }}
       onClick={props.event}
-      // id={props.x}
-      //do not rename tile
-      className="tile"
+      row={props.row}
+      column={props.column}
+  
+      className="cell"
     ></div>
   );
 };

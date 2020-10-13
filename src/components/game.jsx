@@ -18,16 +18,17 @@ class Game extends Component {
   //   });
   // };
 
-  updateVisibility = (tile) => {
-    if (tile.style["background-color"] === "blue") {
-      tile.style = "background-color: grey";
+  updateVisibility = (cell) => {
+    if (cell.style["background-color"] === "blue") {
+      cell.style = "background-color: grey";
     } else {
-      tile.style = "background-color: blue";
+      cell.style = "background-color: blue";
     }
   };
 
   Visibility = (cell) => {
-    this.alive.push({ id: cell.id, element: cell });
+    // this.alive.push({ row: cell.rowId, column: cell.columnId});
+    this.alive.push(cell);
     this.updateVisibility(cell);
   };
   //click counting?
