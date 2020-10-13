@@ -110,8 +110,8 @@ class Game extends Component {
      Tick()
   {
     var ListOfCoordinatesToMakeAlive = this.CellsToMakeAliveOnTick();
-
-    // this.SetMany(ListOfCoordinatesToMakeAlive, CellState.Alive);
+    
+   ListOfCoordinatesToMakeAlive
 
   }
 
