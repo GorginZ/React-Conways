@@ -11,14 +11,6 @@ class Grid extends PureComponent {
     const state = { data: [] };
   }
 
-  // GridBuilder = () => {
-  //       this.cells = [];
-
-  //    this.cells = Array(10).fill(<Cell row = {"row"} event={this.props.tileEvent}/>).map(x => Array(10).fill(<Cell column = {(x)} event={this.props.tileEvent} />));
-
-  //   return this.cells;
-
-  // };
 
   GridBuilder = (rows, columns) => {
     this.cells = [];
@@ -27,7 +19,7 @@ class Grid extends PureComponent {
       this.cells.push(new Array());
       for (let j = 0; j < columns; j++) {
         this.cells[i].push(
-          <Cell row={(i)} column = {(j)} isAlive = {false}event={this.props.tileEvent} />
+          <Cell row={(i)} column = {(j)} isAlive = {false}event={this.props.cellEvent} />
         );
       }
     }

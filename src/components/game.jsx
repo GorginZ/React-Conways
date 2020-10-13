@@ -10,25 +10,32 @@ class Game extends Component {
     this.state = {};
   }
 
-  updateVisibility = (cell) => {
-    if (cell.style["background-color"] === "blue") {
+
+//only cell element
+    updateCellColour = (cell) => {
+    if (cell.isAlive === false) {
+      
       cell.style = "background-color: grey";
+  
     } else {
       cell.style = "background-color: blue";
+      console.log(cell.isAlive);
     }
   };
-
+//only cell element
   Visibility = (cell) => {
    
     this.alive.push(cell);
-    this.updateVisibility(cell);
+    cell.isAlive = true;
+    this.updateCellColour(cell);
   };
-  //click counting?
+  
   handleClick = (event) => {
     this.Visibility(event.target);
     this.setState((state) => {
+      
       console.log(this.alive);
-      return (state.score += 1);
+      
     });
   };
 
@@ -39,7 +46,7 @@ class Game extends Component {
         <div className="scoreBox">
           {" click on the cells to make alive then set start the game "}
         </div>{" "}
-        <Grid tileEvent={this.handleClick} />
+        <Grid cellEvent={this.handleClick} />
       </>
     );
   }

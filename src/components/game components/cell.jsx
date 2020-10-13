@@ -3,10 +3,11 @@ import React, { useState } from "react";
 const Cell = (props) => {
   
   const [colour, setColour] = useState(props.colour);
+  let [isAlive, setAlive] = useState(props.isAlive);
+  // let { isAlive } = props;
 
   let { column } = props;
   let { row } = props;
-  let { isAlive } = props;
   return (
     <div
       style={{
@@ -17,7 +18,7 @@ const Cell = (props) => {
       onClick={props.event}
       row={props.row}
       column={props.column}
-      isAlive = {props.isAlive}
+      isAlive={props.isAlive}
   
       className="cell"
     ></div>
