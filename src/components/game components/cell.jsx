@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
-const Tile = (props) => {
+const Cell = (props) => {
+  
   const [colour, setColour] = useState(props.colour);
-  // const { pairId } = props;
+
+  let { column } = props;
+  let { row } = props;
   return (
     <div
       style={{
@@ -11,10 +14,11 @@ const Tile = (props) => {
         backgroundColor: "grey",
       }}
       onClick={props.event}
-      // id={pairId}
+      // id={props.x}
+      //do not rename tile
       className="tile"
     ></div>
   );
 };
 
-export default Tile;
+export default Cell;
