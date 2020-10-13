@@ -6,6 +6,7 @@ const Cell = (props) => {
 
   let { column } = props;
   let { row } = props;
+  let { isAlive } = props;
   return (
     <div
       style={{
@@ -16,6 +17,7 @@ const Cell = (props) => {
       onClick={props.event}
       row={props.row}
       column={props.column}
+      isAlive = {props.isAlive}
   
       className="cell"
     ></div>

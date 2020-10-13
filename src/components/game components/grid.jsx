@@ -27,7 +27,7 @@ class Grid extends PureComponent {
       this.cells.push(new Array());
       for (let j = 0; j < columns; j++) {
         this.cells[i].push(
-          <Cell row={(i)} column = {(j)} event={this.props.tileEvent} />
+          <Cell row={(i)} column = {(j)} isAlive = {false}event={this.props.tileEvent} />
         );
       }
     }

@@ -19,7 +19,7 @@ class Game extends Component {
   };
 
   Visibility = (cell) => {
-    // this.alive.push({ row: cell.rowId, column: cell.columnId});
+   
     this.alive.push(cell);
     this.updateVisibility(cell);
   };
