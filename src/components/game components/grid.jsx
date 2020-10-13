@@ -6,7 +6,6 @@ class Grid extends PureComponent {
   constructor(props) {
     super(props);
     this.cells = [];
-    // this.cells = {GridBuilder(){}};
 
     const state = { data: [] };
   }
@@ -35,12 +34,12 @@ class Grid extends PureComponent {
   };
 
   RowCount = () => {
-    let rowCount = this.cells[0].length();
+    let rowCount = this.cells.length;
     return rowCount;
   };
 
   ColumnCount = () => {
-    let columnCount = this.cells[1].length();
+    let columnCount = this.cells[0].length;
     return columnCount;
   }
 
