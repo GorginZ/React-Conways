@@ -107,25 +107,24 @@ class Game extends Component {
     return coordinatesOfCellsToAlive;
   }
 
-     Tick()
-  {
-    var ListOfCoordinatesToMakeAlive = this.CellsToMakeAliveOnTick();
-   
-   ListOfCoordinatesToMakeAlive.ForEach((cell) => {
-cell.isAlive = true;
-   })};
+  Tick() {
+    let listOfCoordinatesToMakeAlive = [] 
+    listOfCoordinatesToMakeAlive = this.CellsToMakeAliveOnTick();
 
-  
-
+    // listOfCoordinatesToMakeAlive.ForEach((cell) => {
+    //   cell.isAlive = true;
+    //   console.log("in tick");
+    // });
+  }
 
   render() {
     return (
       <>
         {" "}
-        <div className="scoreBox">
+        <div className="box">
           {" click on the cells to make alive then set start the game "}
         </div>{" "}
-        <button>Start</button>
+        <button onClick={this.Tick}>Start!</button>
         <Grid cellEvent={this.handleClick} />
       </>
     );
@@ -133,4 +132,3 @@ cell.isAlive = true;
 }
 
 export default Game;
-
